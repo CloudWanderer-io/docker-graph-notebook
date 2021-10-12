@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  jupyter-notebook:
+    image: samjackmartin/docker-graph-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ".:/notebook"
+    links:
+      - gremlin
+  gremlin:
+    image: tinkerpop/gremlin-server
+    volumes:
+      - ./gremlin/conf:/opt/gremlin-server/conf
