@@ -1,8 +1,7 @@
 version: "3.9"
 services:
   jupyter-notebook:
-    build: ./docker-graph-notebook
-    # image: samjackmartin/docker-graph-notebook
+    image: samjackmartin/docker-graph-notebook
     ports:
       - "8888:8888"
     volumes:
@@ -10,6 +9,6 @@ services:
     links:
       - gremlin
   gremlin:
-    image: tinkerpop/gremlin-server
-    volumes:
-      - ./gremlin/conf:/opt/gremlin-server/conf
+    image: samjackmartin/docker-graph-notebook-gremlin-server
+    ports:
+      - "8182:8182"
