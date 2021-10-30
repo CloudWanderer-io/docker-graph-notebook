@@ -1,8 +1,9 @@
 name: Smoke Tests
-on: push
+on: [push]
 jobs:
-  ci:
-    runs-on: ubuntu-20.04
+  continuous-integration:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Check out code
         uses: actions/checkout@v2
