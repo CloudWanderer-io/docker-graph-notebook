@@ -10,6 +10,6 @@ jobs:
           docker compose up -d
           sleep 20
           docker compose ps
-          docker compose ps | grep unhealthy
+          docker compose ps | (! grep unhealthy)
           docker compose stop -t 1
         working-directory: test
