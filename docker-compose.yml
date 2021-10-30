@@ -2,6 +2,7 @@ version: "3.9"
 services:
   jupyter-notebook:
     image: samjackmartin/docker-graph-notebook
+    # build: ./docker-graph-notebook/
     ports:
       - "8888:8888"
     volumes:

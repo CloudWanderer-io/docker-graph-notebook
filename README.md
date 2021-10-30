@@ -19,3 +19,9 @@ jupyter-notebook_1  |         http://localhost:8888/?token=88dc054886e3ea73480de
 And open the http://localhost:8888/?token=... address in your browser.
 
 Navigate to `GettingStarted.ipynb` to get started.
+
+## Troubleshooting
+
+If you're trying to use the ``docker-graph-notebook`` image with a gremlin server outside the configuration specified in the docker compose
+you will probably have to run a `%%graph_notebook_config` cell. 
+See [Connecting graph-notebook to a Gremlin Server](https://github.com/aws/graph-notebook/tree/main/additional-databases/gremlin-server) for more information.

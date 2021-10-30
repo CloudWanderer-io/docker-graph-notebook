@@ -30,4 +30,4 @@ push-docker-graph-notebook-gremlin-server:
 	docker push $(LATEST_TAG_NAME)
 
 
-build-and-push-docker: build-docker-graph-notebook build-docker-graph-notebook-gremlin-serverbuild-docker-graph-notebook-gremlin-server push-docker-graph-notebook-gremlin-server
+build-and-push-docker: build-docker-graph-notebook build-docker-graph-notebook-gremlin-server push-docker-graph-notebook push-docker-graph-notebook-gremlin-server
