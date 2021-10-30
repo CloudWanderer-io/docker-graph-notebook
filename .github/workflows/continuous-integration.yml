@@ -1,0 +1,15 @@
+on: push
+jobs:
+  ci:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Run docker compose tests
+        run: |
+          docker compose up -d
+          sleep 30
+          docker compose ps
+          docker compose ps | (! grep 'unhealthy\|starting')
+          docker compose stop -t 1
+        working-directory: test
