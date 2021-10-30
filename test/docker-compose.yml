@@ -19,7 +19,7 @@ services:
     ports:
       - "8182:8182"
     healthcheck:
-      test: ["CMD", "wget", "http://gremlin:8182", "--post-data", "{\"gremlin\": \"\"}", "-O", "healthcheck.output"]
+      test: ["CMD", "wget", "http://gremlin1:8182", "--post-data", "{\"gremlin\": \"\"}", "-O", "healthcheck.output"]
       interval: 5s
       timeout: 2s
       retries: 0
