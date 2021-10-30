@@ -8,8 +8,8 @@ jobs:
       - name: Run docker compose tests
         run: |
           docker compose up -d
-          sleep 20
+          sleep 30
           docker compose ps
-          docker compose ps | (! grep unhealthy)
+          docker compose ps | (! grep 'unhealthy\|starting')
           docker compose stop -t 1
         working-directory: test
